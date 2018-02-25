@@ -6,9 +6,9 @@ import json
 from pprint import pprint
 import datadotworld
 from collections import Counter
-data1= json.load(open('/home/ishank/Downloads/1.json'))
-data2= json.load(open('/home/ishank/Downloads/2.json'))
-data3= json.load(open('/home/ishank/Downloads/3.json'))
+data1= json.load(open('/home/ishank/Downloads/2011-11-01.json'))
+data2= json.load(open('/home/ishank/Downloads/2011-11-02.json'))
+data3= json.load(open('/home/ishank/Downloads/2011-11-03.json'))
 result=data1+data2+data3
 result1=result.copy()
 
