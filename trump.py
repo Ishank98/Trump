@@ -9,9 +9,11 @@ from collections import Counter
 data1= json.load(open('/home/ishank/Downloads/2017-11-01.json'))
 data2= json.load(open('/home/ishank/Downloads/2017-11-02.json'))
 data3= json.load(open('/home/ishank/Downloads/2017-11-03.json'))
+#Joining all the dataset from 2017-11-01 to 2017-11-03 and storing them to result
 result=data1+data2+data3
 result1=result.copy()
 
+#Defining a function to solve questions:
 def search(result):
     #to add all the accounts tweeting about donald trump
     a=0
@@ -43,8 +45,9 @@ def search(result):
     print("")
     print("Solution of the Bonus Question:")
 
-
+    #to add all the positive twwets about donald trump
     i=0
+    #creating a list of positive tweeter
     df1=[]
     for element in trump:
         if "good" in element['text'].lower():
@@ -63,7 +66,8 @@ def search(result):
     print("Hence,the % of accounts which are positive about Donald Trump is:")
     print(i*100/a)
     print("Number of accounts with more than 50% positive tweets about Donald Trump:")
-
+    
+    #total number tweets about donald trump by positive tweeters
     w=[]
     for key in Counter(df1):
         q=0
@@ -71,10 +75,10 @@ def search(result):
             if element['screen_name']==key:
                 q+=1
         w.append(q)
-    print(w)
-    print(Counter(df1).values())
+    #print(w)
+    #print(Counter(df1).values())
     t=np.array(list(Counter(df1).values()))/np.array(w)
-    print(t)
+    #print(t)
     g=0
     for v in t:
         if v>0.5:
