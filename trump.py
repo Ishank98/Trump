@@ -64,20 +64,25 @@ def search(result):
     print(i*100/a)
     print("Number of accounts with more than 50% positive tweets about Donald Trump:")
 
-    q=0
     w=[]
     for key in Counter(df1):
+        q=0
         for element in trump:
             if element['screen_name']==key:
                 q+=1
         w.append(q)
+    print(w)
+    print(Counter(df1).values())
     t=np.array(list(Counter(df1).values()))/np.array(w)
+    print(t)
     g=0
     for v in t:
         if v>0.5:
             g+=1
 
     print(g)
+    print("Hence, the % is:")
+    print(g*100/a)
 search(result)
 
 
