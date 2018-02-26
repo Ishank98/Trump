@@ -13,9 +13,13 @@ result=data1+data2+data3
 result1=result.copy()
 
 def search(result):
+    #to add all the accounts tweeting about donald trump
     a=0
+    #total number of accounts
     c=0
+    #creating a list of screen_name's of accounts tweeting about donald trump
     df=[]
+    #dataset which contains data of only trump related tweets
     trump=[]
     for element in result:
         c+=1
