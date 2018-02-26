@@ -31,6 +31,8 @@ def search(result):
             a+=1
             df.append(element['screen_name'])
             trump.append(element)
+    print("Reference to all tweets about Donald Trump:")
+    pprint(trump)
     print("The number of accounts tweeting about Donald Trump are:")
     print(a)
     print("Hence,the % of accounts tweeting about Donald Trump is:")
