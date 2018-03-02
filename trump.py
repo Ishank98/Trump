@@ -60,7 +60,7 @@ def search(result):
 
 
     print(" ")
-    print("")
+    print(" ")
     print("Solution of the Bonus Question:")
 
     # to add all the positive twwets about donald trump
